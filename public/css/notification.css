@@ -1,0 +1,55 @@
+.notficationDiv{
+    position: absolute;
+    height: 50%;
+    width: 70%;
+    top: 25%;
+    right: -70%;
+    z-index: 2;
+    transition: right 0.5s;
+}
+
+.bar-first-pos{
+    right: -56%;
+}
+
+.bar-second-pos{
+    right: -65%;
+}
+
+.body-pos{
+    right: 0%;
+}
+
+.innerNotification{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.notificationBar{
+    height: 20%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.notificationBody{
+    height: 100%;
+    width:80%;
+    background-color: aqua;
+}
+
+.notifiactionIcon{
+    height: 100%;
+    width: 36%;
+    background: #9BA3EB
+}
+
+.notifiactionComment{
+    height: 100%;
+    width: 64%;
+    background: #646FD4;
+}

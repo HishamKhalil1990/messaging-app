@@ -1,0 +1,73 @@
+<div style="height: 70%; width: 88%; overflow-y: scroll">
+  <table style="width: 100%; box-shadow: 2px 5px 10px 2px #9d9d9d;">
+    <thead
+      style="
+        width: 100%;
+        background: linear-gradient(to left, #9ba3eb, #dbdffd);
+        color: #fff;
+      "
+    >
+      <tr style="width: 100%; height: 70px; font-size: 20px;">
+        <th style="text-align: center; width: 40%">Text</th>
+        <th style="text-align: center; width: 40%">Customers</th>
+        <th style="text-align: center; width: 10%">Send</th>
+        <th style="text-align: center; width: 10%">Delete</th>
+        <th style="display: none">Names</th>
+      </tr>
+    </thead>
+    <tbody id="t-body2">
+      <% for(let i = 0; i < results.length; i++){ %>
+      <tr id="<%= results[i].id %>" style="height: 70px">
+        <td style="width: 40%">
+          <textarea readonly id="<%= results[i].id %>-text" style="text-align: right; width: 100%; height: 70px;font-size: 15px;">
+                            <%= results[i].messageText %>
+                        </textarea
+          >
+        </td>
+        <td style="width: 40%">
+          <div id="<%= results[i].id %>-name" style="display: flex;justify-content: center;align-items: center; width: 100%; height: 70px">
+                            <%= results[i].customersList.list.name %>
+                        </div
+          >
+        </td>
+        <td id="<%= results[i].id %>-send" style="text-align: center; width: 10%">
+          <svg
+            id="<%= results[i].id %>-send"
+            style="fill: green; height: 30%; width: 30%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              id="<%= results[i].id %>-send"
+              d="M 511.6 36.86 l -64 415.1 c -1.5 9.734 -7.375 18.22 -15.97 23.05 c -4.844 2.719 -10.27 4.097 -15.68 4.097 c -4.188 0 -8.319 -0.8154 -12.29 -2.472 l -122.6 -51.1 l -50.86 76.29 C 226.3 508.5 219.8 512 212.8 512 C 201.3 512 192 502.7 192 491.2 v -96.18 c 0 -7.115 2.372 -14.03 6.742 -19.64 L 416 96 l -293.7 264.3 L 19.69 317.5 C 8.438 312.8 0.8125 302.2 0.0625 289.1 s 5.469 -23.72 16.06 -29.77 l 448 -255.1 c 10.69 -6.109 23.88 -5.547 34 1.406 S 513.5 24.72 511.6 36.86 Z"
+            />
+          </svg>
+        </td>
+        <td id="<%= results[i].id %>-delete" style="text-align: center; width: 10%">
+          <svg
+            id="<%= results[i].id %>-delete"
+            style="fill: red; height: 30%; width: 30%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              id="<%= results[i].id %>-delete"
+              d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"
+            />
+          </svg>
+        </td>
+        <td id="<%= results[i].id %>-names" style="display: none">
+          <%= JSON.stringify(names[i]) %>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <div style="width:100%;height:30%;">
+    <div style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;">
+      <div id="noMsgs" style="z-index:-1;width:30%;height:30%;display:flex;justify-content:center;align-items:center;box-shadow: 2px 5px 10px 2px #9d9d9d;">
+        لا يوجد رسائل
+      </div>
+    </div>
+  </div>
+</div>

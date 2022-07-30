@@ -1,0 +1,163 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background: rgb(243, 243, 243);
+    overflow: hidden;
+}
+
+#menuContainer {
+    position: relative;
+}
+
+#menuMain {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    display: grid;
+    place-content: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .contentContainer{
+    top: 10%;
+    left: 100%;
+    position: absolute;
+    height: 90%;
+    width: 93%;
+    border-top: solid #646FD4;
+    border-left: solid #242F9B;
+    border-width: 4px;
+    border-top-left-radius: 27px;
+    background: #fff;
+  }
+
+  .container-transition1{
+    transition:left 1s;
+  }
+
+  .container-transition2{
+    transition: width 0.2s, left 0.2s;
+  }
+
+  .container-active{
+    left: 7%;
+  }
+
+  .container-after{
+    width: 88%;
+    left: 12%;
+  }
+  
+  
+  .menu {
+    position: relative;
+    top: 40px;
+    padding: 30px;
+    background: linear-gradient(to left, #646FD4, #242F9B);
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+    
+  }
+
+  .menu::before {
+    content: "";
+    background: #fff;
+    border-radius: 5px;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    left: 16px;
+    top: 27px;
+    transition: 0.2s ease;
+    z-index: 1;
+    transform: rotate(0deg);
+  }
+  .menu::after {
+    content: "";
+    background: #fff;
+    border-radius: 5px;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    left: 16px;
+    top: 27px;
+    transition: 0.2s ease;
+    z-index: 1;
+    transform: rotate(-90deg);
+  }
+  .menu.open {
+    opacity: .9;
+  }
+
+  .open.menu::before {
+    transform: rotate(45deg);
+  }
+  .open.menu::after {
+    transform: rotate(-45deg);
+  }
+  .menu.open .menuButton {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu.open .menuButton:first-of-type {
+    bottom: -40px;
+    right: -70px;
+    background: url("../img/message.png") no-repeat 50%/50% #fff;
+  }
+  .menu.open .menuButton:nth-of-type(2) {
+    bottom: -80px;
+    background: url("../img/logout.png") no-repeat 50%/ 50% #fff;
+    transition-delay: .05s;
+  }
+  .menu.open .menuButton:last-of-type {
+    bottom: 40px;
+    right: -70px;
+    background: url("../img/task.png") no-repeat 70%/ 70% #fff;
+    transition-delay: .1s;
+  }
+  
+  .menuButton {
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: inherit;
+    transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity, 0.2s cubic-bezier(.08,.82,.17,1) transform;
+    
+  }
+
+  .menuButton:hover {
+    transform: scale(1.1);
+  }
+
+  .hide-show{
+    display: none;
+  }
+
+  .resultContainer{
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    width: 98%;
+    height: 83%;
+    border: solid black;
+  }
+
+  tr:nth-child(even) {
+    background: rgb(223 223 223);
+  }
+
+  tr:hover{
+    background: linear-gradient(to left, #DBDFFD, #9BA3EB);
+    color: #fff;
+  }

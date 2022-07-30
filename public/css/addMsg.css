@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.card {
+    height: auto;
+    /* width: 340px; */
+    background-color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+    background: linear-gradient(to left, #9BA3EB, #DBDFFD);
+    width: 90%;
+    position: absolute;
+    bottom: 0px;
+    left: 5%;
+    /* transition: width 1s; */
+    z-index: 1;
+}
+
+.card-after{
+    width: 90%;
+}
+
+.card2 {
+    height: auto;
+    /* width: 340px; */
+    background-color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+    background: linear-gradient(to left, #646FD4, #9BA3EB);
+    text-align: center;
+    width: 0%;
+    position: absolute;
+    top: -338.7px;
+    left: 75%;
+    /* transition: width 1s; */
+    z-index: 0;
+}
+
+.card2-after{
+    width: 00%;
+}
+
+.card2-scroll{
+    max-height: 338.7px;
+    overflow-y: scroll;
+}
+
+.card2-hideScroll{
+    overflow-y: hidden;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between; 
+    text-align:center;
+}
+.header img{
+    margin-top:-5px;
+    width:30px;
+    
+}
+
+div img{
+    margin-top:-5px;
+    width:30px;
+    
+}
+
+.input_text {
+    margin-top: 0px
+}
+
+.input_text textarea {
+    resize: none;
+    /* height: 90px; */
+    height: 150px;
+    width: 100%;
+    border: 1px solid #eae1e5;
+    padding: 10px;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.button {
+    margin-top: 20px
+}
+
+.button button {
+    /* width: 50%; */
+    width: 12%;
+    height: 45px;
+    color: #fff;
+    background-color: #141e42;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.5s;
+    outline: 0;
+    padding: 5px;
+}
+
+.button button:hover {
+    background-color: #000
+}
+
+.terms {
+    margin-top: 20px
+}
+
+.terms p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #979aaa
+}
+
+.terms p a {
+    text-decoration: none;
+    color: #6f85ea
+}
+
+.added_answers {
+    margin-top: 20px;
+    list-style: none
+}
+
+.added_answers li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  
+    padding-top:15px;
+     padding-bottom:15px;
+    position: relative;
+    border-top: 2px solid #fff;
+}
+
+.added_answers li small {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    /* border: 1px solid #ccc; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+    transition: all 0.5s
+}
+
+.added_answers li small div {
+    margin-top: 1px;
+    font-size: 15px;
+    color:green;
+}
+
+.added_answers li small:hover {
+    border: 1px solid green !important;
+    color: green !important
+}
+
+
+.added_answers li p {
+    font-size: 13px;
+    padding: 0 40px !important;
+    padding-right: 10px;
+
+    max-width: 314px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+     
+}
+
+.added_answers li span {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #fff;
+    /* border: 1px solid #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: absolute;
+    right: 0;
+}
+
+.added_answers li span:hover {
+    border: 1px solid red !important;
+}
+ 
+.added_answers li span i {
+    margin-top: 1px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color:#ccc;
+}
+
+.added_answers li span i:hover {
+    color: red !important;
+}
+
+.strike_none {
+    text-decoration: none !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.svgHide {
+    display: none;
+}
+
+.textPosition{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.active { 
+    fill: #fff;
+}
+
+.text-alignment{
+    text-align: right;
+}
+
+.msgContent{
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    height: 60%;
+    min-width: 33%;
+    width: auto;
+    background-color: #fff;
+    z-index: -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 5px 10px 1px #9d9d9d;
+}
+
+.msgContent-after{
+    z-index: 2;
+}
+
+.innerMsgContent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#navBar{
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to left, #646FD4, #9BA3EB);
+}
+
+#contentMid{
+    width: 100%;
+    height: 65%;
+    position: relative;
+}
+
+#contentBtu{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#msgcontentbtu{
+    width: 55px;
+    margin-right: 20px;
+}
+
+#msgcontentbtu:hover{
+    background-color: #fff;
+    border:solid 2px #141e42;
+    color: #141e42;
+}
+
+#deletecontentbtu{
+    width: 55px;
+    margin-right: 20px;
+}
+
+#deletecontentbtu:hover{
+    background-color: #fff;
+    border:solid 2px #141e42;
+    color: #141e42;
+}
+
+#navUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  #navUL li {
+    height: 100%;
+    float: left;
+  }
+
+.navbarli{
+    height: 100%;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff
+}
+
+.activeButton {
+    background: #fff;
+    color:#646FD4
+}
+
+#text-area-p{
+    height: 90%;
+    min-width: 90%;
+    width: auto;
+    padding: 10px;
+}
+
+.initial-pos{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:1;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.addDisplay{
+    display: contents;
+}
+
+.final-pos{
+    z-index:0;
+    opacity: 0;
+}
+
+#contactsDiv{
+    height: 100%;
+    width: 23.75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulDesign {
+    height: 90%;
+    width: 90%;
+    overflow-y: scroll;
+}

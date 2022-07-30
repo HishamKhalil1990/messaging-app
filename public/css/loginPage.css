@@ -1,0 +1,341 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.wrapper {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    margin: 3% auto;
+    box-shadow: 2px 18px 70px 0px #9D9D9D;
+    overflow: hidden;
+}
+
+.login-text {
+    width: 800px;
+    height:450px;
+    background: linear-gradient(to left, #ab68ca, #de67a3); 
+    position: absolute;
+    top: -300px;
+    box-sizing: border-box;
+    padding: 6%;
+    transition: all 0.5s ease-in-out;
+    z-index: 11;
+}
+
+.text {
+    margin-left: 20px;
+    color: #fff;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.text a,a:visited {
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;  
+    font-weight: bold;
+    display: block;
+}
+
+.text hr {
+    width: 15%;
+    float: left;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.text input {
+    margin-top: 30px;
+    height: 40px;
+    width: 300px;
+    border-radius: 2px;
+    border: none;
+    background-color: #444;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.text input[type=text] {
+    margin-top: 60px;
+}
+
+/* .text button {
+    margin-top: 60px;
+    height: 40px;
+    width: 140px;
+    outline: none;
+} */
+
+.text .login-btn {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 2px;
+    color: #696a86;
+}
+
+.text .login-btn:hover{
+    background: transparent;
+    border: 2px solid #fff;;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.cta {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #696a86;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: -30px;
+    left: 370px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.call-text {
+    background-color: #fff;
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    /* padding: 10%; */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.call-text h1 {
+    font-size: 42px;
+    margin-top: 10%;
+    color: #696a86;
+}
+
+.call-text h1 span {
+    color: #333;
+    font-weight: bolder;
+    
+}
+
+.call-text button {
+    height: 40px;
+    width: 180px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to left, #ab68ca, #de67a3); 
+    color: #fff;
+    font-weight: bolder;
+    margin-top: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.show-hide {
+    display: block;
+}
+
+.expand {
+    transform: translateY(300px);
+}
+
+#imgDiv {
+    height: 120%;
+    width: 80%;
+    background-image: url("../img/logo-alrayhan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+
+/*  -------------------------------------------------------------*/
+.button2 {
+    position: relative;
+    display: inline-block;
+    /* padding: 15px 20px; */
+    height: 42px;
+    width: 95px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-top: 34px;
+    font-family: "Roboto", sans-serif;
+    filter: hue-rotate(0deg);
+    /* border: 2px solid #fff; */
+    transition: all 0.1s linear;
+  
+}
+  
+.button2:hover {
+    border: 1px solid transparent;
+}
+
+.button2:hover span {
+    position: absolute;
+    display: block;
+}
+
+.button2:hover span:nth-child(1) {
+    filter: hue-rotate(0deg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #3a86ff);
+    animation: animate1 1s linear infinite;
+  }
+  @keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+
+  .button2:hover span:nth-child(2) {
+    filter: hue-rotate(60deg);
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #3a86ff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  .button2:hover span:nth-child(3) {
+    filter: hue-rotate(120deg);
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    background: linear-gradient(270deg, transparent, #3a86ff);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  @keyframes animate3 {
+    0% {
+      right: -100%;
+      height: 3px;
+    }
+    50%,
+    100% {
+      height: 2px;
+      right: 100%;
+    }
+  }
+
+  .button2:hover span:nth-child(4) {
+    filter: hue-rotate(300deg);
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #3a86ff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+
+
+.notification {
+    background-color: #fff;
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.notification-after {
+    z-index: 10;
+}
+
+#notification-inner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+main{
+  position: absolute;
+  left: 32%;
+  top: 20%;
+}
+
+#accept {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 12em;
+	height: 12em;
+  border-radius: 50%;
+  z-index: -1;
+  text-align: center;
+  background: linear-gradient(to left, #017201, #78e678);
+   
+}
+
+#reject {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 12em;
+	height: 12em;
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(to left, #950303, #fe7878);
+  text-align: center;
+}
+
+.link{
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  z-index: -1;
+}
+
+#reject div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#accept div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

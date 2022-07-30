@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/addMsg.css" />
+    <link rel="stylesheet" href="../css/filter.css" />
+    <link rel="stylesheet" href="../css/spinner.css" />
+    <link rel="stylesheet" href="../css/checkBox.css" />
+    <link rel="stylesheet" href="../css/list.css" />
+    <link rel="stylesheet" href="../css/notification.css" />
+    <link rel="stylesheet" href="../css/sending.css" />
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/messaging.js"></script>
+    <script src="../js/addMsg.js"></script>
+    <script src="../js/filter.js"></script>
+    <script src="../js/sending.js"></script>
+    <title>Main</title>
+</head>
+<body style="position:relative">
+    <div id="menuContainer">
+        <div id="menuMain">
+            <div class="menu">
+                <div id="msgBtu"class="menuButton"></div>
+                <div id="logoutBtu"class="menuButton"></div>
+                <div id="tasksBtu"class="menuButton"></div>
+            </div>
+        </div id="menuMain">
+    </div>
+    <div class="contentContainer">
+        <%- include("partials/todo") %>
+        <%- include("partials/sendMessage") %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+generator Client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url = env("DATABASE_URL")
+}
+
+model contacts {
+    id Int @id @default(autoincrement())
+    name String
+    number String
+}
+
+model messages {
+    id Int @id @unique @default(autoincrement())
+    messageText String
+    customersList Json
+    status String @default("pending")
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model users {
+    id Int @id @default(autoincrement())
+    username String @unique
+    password String
+    role String @default("user")
+}

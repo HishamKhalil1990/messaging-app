@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+.card {
+  position: relative;
+  
+  width: 841px;
+  height: 473px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Light blue cover above the slide show*/
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* z-index: 900; */
+  display: block;
+  width: 841px;
+  height: 473px;
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 105%;
+  
+  transform: translateX( 800px );
+  background-image: url( ../img/03-Dates.png );
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  animation: opaqTransition 8s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+
+.card_part.card_part-two {
+  z-index: 6;
+  background-image: url( ../img/04-Spices.png );
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  animation-delay: 2s;
+}
+
+.card_part.card_part-three {
+  z-index: 5;
+  background-image: url( ../img/05-Pulses&Legumes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  animation-delay: 4s;
+}
+
+.card_part.card_part-four {
+  z-index: 4;
+  background-image: url(../img/06-Dry-Fruit.png );
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  animation-delay: 6s;
+}
+
+
+@keyframes opaqTransition {
+  3% { transform: translateX( 0 ); }
+  25% { transform: translateX( 0 ); }
+  28% { transform: translateX( -800px ); }
+  100% { transform: translateX( -800px ); }
+}
